@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты</title>
+</head>
+<body>
+    <h1>Результаты парсинга</h1>
+    <table>
+        <tr>
+            <th>Название товара</th>
+            <th>Цена</th>
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.title }}</td>
+            <td>{{ product.price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

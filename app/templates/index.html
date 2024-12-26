@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+</head>
+<body>
+    <h1>Парсинг товаров с Divan.ru</h1>
+    <form method="POST" action="{{ url_for('parse') }}">
+        {{ form.hidden_tag() }}
+        {{ form.category.label }} {{ form.category() }}
+        <button type="submit">Парсить</button>
+    </form>
+
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+</body>
+</html>
